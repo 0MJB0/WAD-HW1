@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "author": {
+            "name": "John Doe",
+            "avatar": "images/avatar.svg"
+        },
+        "createTime": "2026-10-30T14:20:00Z",
+        "body": "Tartu 2026",
+        "image": "images/tartu.svg",
+        "imageAlt": "Tartu town hall square",
+        "likes": 12
+    },
+    {
+        "id": 2,
+        "author": {
+            "name": "Mari Tamm",
+            "avatar": "images/avatar.svg"
+        },
+        "createTime": "2026-10-28T08:05:00Z",
+        "body": "Anyone knows in which room is the lab today?",
+        "image": null,
+        "imageAlt": null,
+        "likes": 3
+    },
+    {
+        "id": 3,
+        "author": {
+            "name": "Karl Kask",
+            "avatar": "images/avatar.svg"
+        },
+        "createTime": "2026-10-25T19:45:00Z",
+        "body": "Weekend trip to the lake. What a sunset!",
+        "image": "images/lake.svg",
+        "imageAlt": "Sunset over a lake",
+        "likes": 27
+    },
+    {
+        "id": 4,
+        "author": {
+            "name": "Liis Saar",
+            "avatar": "images/avatar.svg"
+        },
+        "createTime": "2026-10-22T11:30:00Z",
+        "body": "Does anyone have the slides from the last lecture?",
+        "image": null,
+        "imageAlt": null,
+        "likes": 5
+    },
+    {
+        "id": 5,
+        "author": {
+            "name": "John Doe",
+            "avatar": "images/avatar.svg"
+        },
+        "createTime": "2026-10-20T07:15:00Z",
+        "body": "Coffee before the 8 am lecture is a must.",
+        "image": "images/coffee.svg",
+        "imageAlt": "A cup of coffee",
+        "likes": 18
+    },
+    {
+        "id": 6,
+        "author": {
+            "name": "Mari Tamm",
+            "avatar": "images/avatar.svg"
+        },
+        "createTime": "2026-10-17T16:00:00Z",
+        "body": "Looking for a teammate for the WAD project. Send me a message!",
+        "image": null,
+        "imageAlt": null,
+        "likes": 2
+    },
+    {
+        "id": 7,
+        "author": {
+            "name": "Karl Kask",
+            "avatar": "images/avatar.svg"
+        },
+        "createTime": "2026-10-14T13:10:00Z",
+        "body": "The university library is the best place to study before exams.",
+        "image": "images/library.svg",
+        "imageAlt": "Bookshelves in the library",
+        "likes": 9
+    },
+    {
+        "id": 8,
+        "author": {
+            "name": "Liis Saar",
+            "avatar": "images/avatar.svg"
+        },
+        "createTime": "2026-10-10T21:40:00Z",
+        "body": "Is the homework deadline the same for all groups?",
+        "image": null,
+        "imageAlt": null,
+        "likes": 4
+    },
+    {
+        "id": 9,
+        "author": {
+            "name": "John Doe",
+            "avatar": "images/avatar.svg"
+        },
+        "createTime": "2026-10-06T09:25:00Z",
+        "body": "First snow of the year in the forest!",
+        "image": "images/snow.svg",
+        "imageAlt": "A small house in the snowy forest",
+        "likes": 31
+    },
+    {
+        "id": 10,
+        "author": {
+            "name": "Mari Tamm",
+            "avatar": "images/avatar.svg"
+        },
+        "createTime": "2026-10-02T18:55:00Z",
+        "body": "Finally finished the JavaScript lab. The to-do list works!",
+        "image": null,
+        "imageAlt": null,
+        "likes": 7
+    }
+]

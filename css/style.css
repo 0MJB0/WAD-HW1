@@ -1,0 +1,316 @@
+/*
+ * Required selectors (Task 4):
+ *   Pseudo-class ........... nav a:hover           (Home / Add Post background on hover)
+ *   Pseudo-element ......... .like::after          (" Like" text after the like icon)
+ *   Descendant selector .... nav a                 (all links inside the nav)
+ *   Child selector ......... .post > p             (post text, direct child of the article)
+ *   Adjacent sibling ....... nav a + a             (separator line before "Add Post")
+ *   General sibling ........ .post-header ~ .post-footer (line above the like button)
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 10px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: "Courier New", Courier, monospace;
+    background-color: #f3f7fc;
+    color: #222222;
+}
+
+/* ---------- Header / navigation bar ---------- */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 10px;
+    background-color: #a9c4e0;
+    border-radius: 8px;
+}
+
+.site-header nav {
+    display: flex;
+}
+
+/* Descendant selector: every link inside the nav */
+nav a {
+    padding: 8px 12px;
+    color: #222222;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* Adjacent sibling selector: separator line between Home and Add Post */
+nav a + a {
+    border-left: 2px solid #222222;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Pseudo-class: background color changes on hover */
+nav a:hover {
+    background-color: #1f4e79;
+    color: #ffffff;
+}
+
+.user-icon {
+    padding: 0;
+    border: none;
+    background: #1f4e79;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.user-icon img {
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
+/* ---------- Profile dropdown (Task 7) ---------- */
+.profile {
+    position: relative;
+}
+
+.profile-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    z-index: 10;
+    min-width: 180px;
+    padding: 10px 14px;
+    background-color: #dbe7f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 0.85rem;
+}
+
+.profile-menu.open {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.profile-menu p {
+    margin: 0;
+}
+
+.profile-name {
+    font-weight: bold;
+}
+
+.profile-menu a {
+    color: #1f4e79;
+    text-decoration: none;
+}
+
+.profile-menu a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Page layout (index.html) ---------- */
+.page {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+}
+
+.sidebar {
+    flex: 1;
+    min-height: 200px;
+    background-color: #a9c4e0;
+    border-radius: 8px;
+}
+
+.feed {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ---------- Posts ---------- */
+.post {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px;
+    background-color: #dbe7f4;
+    border-radius: 8px;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-header .avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Child selector: paragraphs that are direct children of a post */
+.post > p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* General sibling selector: footer of a post that follows its header */
+.post-header ~ .post-footer {
+    display: flex;
+    padding-top: 6px;
+    border-top: 1px solid #9fb9d6;
+}
+
+.like {
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.like img {
+    width: 24px;
+    height: 24px;
+}
+
+.like-count {
+    margin-left: 6px;
+    font-size: 0.8rem;
+    align-self: center;
+}
+
+.error {
+    padding: 8px;
+    color: #a40000;
+    background-color: #f6dada;
+    border-radius: 8px;
+}
+
+/* Pseudo-element: small label after the like button */
+.like::after {
+    content: " Like";
+    font-family: inherit;
+    font-size: 0.8rem;
+    vertical-align: super;
+}
+
+.site-footer {
+    padding: 10px;
+    text-align: center;
+    background-color: #a9c4e0;
+    border-radius: 8px;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* ---------- Forms (addPost.html, login.html) ---------- */
+.center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 40px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    max-width: 360px;
+    padding: 20px;
+    background-color: #dbe7f4;
+    border-radius: 8px;
+}
+
+.form-row {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+
+.form-row label {
+    width: 70px;
+    text-align: right;
+}
+
+.form-row textarea,
+.form-row input {
+    flex: 1;
+    min-width: 0;
+}
+
+.btn {
+    padding: 6px 12px;
+    border: none;
+    font-family: inherit;
+    color: #ffffff;
+    background-color: #1f4e79;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #163a5c;
+}
+
+.login h1 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.login p {
+    margin: 0;
+}
+
+.login a {
+    color: #00a2e8;
+    text-decoration: none;
+}
+
+.login a:hover {
+    text-decoration: underline;
+}
+
+.login input {
+    width: 160px;
+    padding: 4px;
+    border: none;
+}
+
+/* ---------- Cellphone layout ---------- */
+@media (max-width: 600px) {
+    .page {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-row label {
+        width: auto;
+        text-align: left;
+    }
+}

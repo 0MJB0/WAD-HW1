@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostIt - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="addPost.html">Add Post</a>
+        </nav>
+
+        <div class="profile">
+            <button type="button" id="profile-button" class="user-icon" aria-haspopup="true" aria-controls="profile-menu">
+                <img src="images/avatar.svg" alt="User profile">
+            </button>
+            <div id="profile-menu" class="profile-menu">
+                <p class="profile-name">John Doe</p>
+                <p class="profile-email">john.doe@ut.ee</p>
+                <a href="login.html">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="page">
+        <aside class="sidebar"></aside>
+
+        <!-- posts are created by js/main.js from data/posts.json -->
+        <main class="feed" id="feed"></main>
+
+        <aside class="sidebar"></aside>
+    </div>
+
+    <footer class="site-footer">
+        <p>Footer</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
